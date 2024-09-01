@@ -1,0 +1,90 @@
+/* Overall navbar styling */
+.navbar {
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 12px; /* Smoother rounded corners */
+    padding: 15px 30px; /* Increased padding for a more spacious look */
+    position: relative; /* Allows positioning of pseudo-elements */
+  }
+  
+  /* Top section with logo and contact */
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0; /* Slightly thicker border for separation */
+  }
+  
+  /* Logo styling */
+  .navbar-logo a {
+    color: #2c3e50; /* Dark slate color */
+    font-size: 2rem; /* Larger font size */
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Custom font */
+    letter-spacing: 1px; /* Slightly spaced letters */
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for logo */
+  .navbar-logo a:hover {
+    color: #2980b9; /* Blue color on hover */
+  }
+  
+  /* Contact information styling */
+  .navbar-contact {
+    color: #7f8c8d; /* Lighter gray color */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    font-family: 'Poppins', sans-serif; /* Custom font */
+    text-align: right; /* Align text to the right */
+  }
+  
+  /* Bottom section with navigation links */
+  .navbar-bottom {
+    padding-top: 10px;
+  }
+  
+  /* Navigation links styling */
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the links */
+    gap: 25px; /* Increased gap for spacing */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Individual link styling */
+  .navbar-links li a {
+    color: #2c3e50; /* Dark slate color */
+    text-decoration: none;
+    font-size: 1.1rem; /* Slightly larger font size */
+    font-family: 'Poppins', sans-serif; /* Custom font */
+    padding: 10px 20px; /* Larger padding for clickable area */
+    border-radius: 6px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover effect for navigation links */
+  .navbar-links li a:hover {
+    background-color: #2980b9; /* Blue background on hover */
+    color: #ffffff; /* White text on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
+    transform: translateY(-2px); /* Subtle lift effect */
+  }
+  
+  /* Optional: Add a decorative gradient background */
+  .navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffffff, #f7f7f7); /* Light gradient */
+    z-index: -1; /* Behind the navbar content */
+    border-radius: 12px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  

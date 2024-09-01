@@ -1,0 +1,108 @@
+.contact-us-section {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    padding: 50px 15px; /* Adjusted padding */
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-us-section::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+    animation: pulse 8s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+  
+  .contact-us-section h2 {
+    font-size: 2.2rem; /* Adjusted font size */
+    color: #2980b9; /* Blue text */
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px; /* Adjusted margin-bottom */
+  }
+  
+  .contact-us-section p {
+    font-size: 1.1rem; /* Adjusted font size */
+    color: #e0e7ff; /* Light blue text */
+    margin-bottom: 25px; /* Adjusted margin-bottom */
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .contact-info {
+    margin-bottom: 30px; /* Adjusted margin-bottom */
+  }
+  
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .contact-detail a {
+    color: #2980b9; /* Blue text */
+    font-size: 1rem; /* Adjusted font size */
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-detail a:hover {
+    color: #1f6f9e; /* Darker blue on hover */
+  }
+  
+  .contact-icon {
+    color: #2980b9; /* Blue icon */
+    font-size: 1.5rem; /* Adjusted icon size */
+  }
+  
+  .contact-button {
+    background-color: #2980b9; /* Blue button */
+    color: #ffffff; /* White text */
+    padding: 12px 25px; /* Adjusted padding */
+    font-size: 1rem; /* Adjusted font size */
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 50px; /* Fully rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #1f6f9e; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  
+  @media (max-width: 768px) {
+    .contact-us-section {
+      padding: 20px; /* Adjusted padding for small screens */
+    }
+  
+    .contact-us-section h2 {
+      font-size: 1.8rem; /* Adjusted font size */
+    }
+  
+    .contact-us-section p {
+      font-size: 1rem; /* Adjusted font size */
+   
+  
