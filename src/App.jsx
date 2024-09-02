@@ -16,7 +16,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Product />} /> {/* Use the Product component here */}
+        <Route path="/products" element={<Product />} /> 
+        <Route path="/" element={<About />} /> 
       </Routes>
       <Services />
       <Brands />
