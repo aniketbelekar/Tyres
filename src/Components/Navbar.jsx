@@ -29,9 +29,9 @@ const Navbar = () => {
         <ul className="navbar-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/products">Products</Link></li>
-          <li><Link to="/about">About Us</Link></li> {/* Navigate to About Us page */}
-          <li><a href="/" onClick={handleFooterClick}>Scroll to Footer</a></li> {/* Scroll to Footer link */}
-          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><a href="/" onClick={handleFooterClick}>Scroll to Footer</a></li>
+          <li><Link to="/contact">Contact</Link></li> {/* Updated path */}
         </ul>
       </div>
     </nav>

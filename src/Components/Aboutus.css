@@ -1,38 +1,96 @@
 .about-us-container {
-    padding: 20px;
-    background-color: #f9f9f9;
-    color: #333;
-    border-radius: 8px;
-    margin: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+    color: #2c3e50;
+    border-radius: 12px;
+    margin: 30px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .about-us-container:hover {
+    transform: scale(1.02);
   }
   
   .about-us-container h1 {
-    font-size: 2.5em;
-    color: #003366;
-    margin-bottom: 15px;
+    font-size: 3em;
+    color: #004d66;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
   
   .about-us-container h2 {
-    font-size: 1.8em;
-    color: #005b99;
-    margin-top: 25px;
-    margin-bottom: 10px;
+    font-size: 2em;
+    color: #006699;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bb5;
+    padding-bottom: 5px;
   }
   
   .about-us-container p {
     font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #34495e;
   }
   
   .about-us-container ul {
     font-size: 1.2em;
     margin-left: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    color: #34495e;
   }
   
   .about-us-container li {
     margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .about-us-container li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #007bb5;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .about-us-container {
+      padding: 20px;
+      margin: 20px 10px;
+    }
+  
+    .about-us-container h1 {
+      font-size: 2.5em;
+    }
+  
+    .about-us-container h2 {
+      font-size: 1.8em;
+    }
+  
+    .about-us-container p,
+    .about-us-container ul {
+      font-size: 1.1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-us-container h1 {
+      font-size: 2em;
+    }
+  
+    .about-us-container h2 {
+      font-size: 1.5em;
+    }
+  
+    .about-us-container p,
+    .about-us-container ul {
+      font-size: 1em;
+    }
   }
   
