@@ -5,7 +5,7 @@ import './Navbar.css';
 const Navbar = () => {
   const navigate = useNavigate();
 
-  const handleAboutClick = (e) => {
+  const handleFooterClick = (e) => {
     e.preventDefault();
     navigate('/');
     setTimeout(() => {
@@ -29,12 +29,13 @@ const Navbar = () => {
         <ul className="navbar-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/products">Products</Link></li>
-          <li><a href="/about" onClick={handleAboutClick}>About Us</a></li>
+          <li><Link to="/about">About Us</Link></li> {/* Navigate to About Us page */}
+          <li><a href="/" onClick={handleFooterClick}>Scroll to Footer</a></li> {/* Scroll to Footer link */}
           <li><Link to="/contact">Contact</Link></li>
         </ul>
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

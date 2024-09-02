@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../Components/Footer.css'; // Import the CSS file for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCar, faWrench, faCogs, faPhotoVideo } from '@fortawesome/free-solid-svg-icons';
+import { faCar, faWrench, faCogs } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
   return (
-    <footer className="footer-section">
+    <footer id="footer" className="footer-section">
       <div className="footer-content">
         <div className="footer-about">
           <h2>About Us</h2>
@@ -71,9 +71,9 @@ const Footer = () => {
         <div className="footer-gallery">
           <h2>Gallery</h2>
           <div className="gallery-images">
-            <img src="public/tvs tyre.jpeg" />
-            <img src="public/machine.jpeg" />
-            <img src="public/air machine.jpeg" />
+            <img src="/tvs-tyre.jpeg" alt="TVS Tyre" />
+            <img src="/machine.jpeg" alt="Machine" />
+            <img src="/air-machine.jpeg" alt="Air Machine" />
           </div>
         </div>
       </div>
@@ -82,6 +82,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
