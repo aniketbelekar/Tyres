@@ -42,3 +42,48 @@
   font-family: 'Poppins', sans-serif;
   color: #f39c12; /* Golden color for names */
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 40px 15px;
+  }
+
+  .testimonials-section h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 15px 30px;
+  }
+
+  .testimonial-text {
+    font-size: 1.1rem;
+  }
+
+  .testimonial-name {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 30px 10px;
+  }
+
+  .testimonials-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-card {
+    padding: 10px 20px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .testimonial-name {
+    font-size: 1rem;
+  }
+}
