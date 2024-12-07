@@ -15,7 +15,7 @@ const Testimonials = lazy(() => import("./Components/Testimonials"));
 const ContactUs = lazy(() => import("./Components/Contactsus"));
 const Product = lazy(() => import("./Components/Products"));
 const AboutUs = lazy(() => import("./Components/Aboutus"));
-const TyreSelector = lazy(() => import("./Components/tyreselector"));
+const TyreSelector = lazy(() => import("./Components/TyreSelector"));
 const ProductDetails = lazy(() => import("./Components/ProductDetail"));
 const BookingAppointment = lazy(() => import("./Components/bookingappoinment"));
 
