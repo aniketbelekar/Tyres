@@ -4,7 +4,7 @@ import ScrollToTop from "./Components/ScrollToTop";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import ErrorBoundary from "./Errorboundary"; // Error Boundary
-import Loader from "./Loader"; // Custom loader with image
+import Loader from "./Components/Loader"; // Custom loader with image
 
 // Lazy load the components
 const Home = lazy(() => import("./Components/Home"));

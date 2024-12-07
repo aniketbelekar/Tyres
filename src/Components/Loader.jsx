@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Loader.css"; // Ensure this CSS file is available
+import "../Components/Loader.css"; // Ensure this CSS file is available
 
 const Loader = () => {
   const [loading, setLoading] = useState(true);
