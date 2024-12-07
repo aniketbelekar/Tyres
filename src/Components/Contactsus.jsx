@@ -1,7 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import '../Components/Contacts.css'; // Import the CSS file for styling
 
 const ContactUs = () => {
+  const navigate = useNavigate(); // Initialize the navigate function
+
+  const handleButtonClick = () => {
+    // Redirect to WhatsApp with the desired phone number
+    window.location.href = 'https://wa.me/9823678248'; // Replace with your actual WhatsApp number
+  };
+
   return (
     <section className="contact-us-section">
       <h2>BEST-IN-CLASS Products & Services</h2>
@@ -16,9 +24,11 @@ const ContactUs = () => {
           <a href="tel:+1234567890">+1 234 567 890</a>
         </div>
       </div>
-      <button className="contact-button">Contact Us</button>
+      <button className="contact-button" onClick={handleButtonClick}>
+        Contact Us on WhatsApp
+      </button>
     </section>
   );
-}
+};
 
 export default ContactUs;

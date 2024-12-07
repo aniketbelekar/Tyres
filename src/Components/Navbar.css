@@ -1,162 +1,140 @@
-/* Overall navbar styling */
+/* General navbar styling */
 .navbar {
   background-color: #ffffff; /* White background */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow for more depth */
-  border-radius: 12px; /* Smooth rounded corners */
-  padding: 15px 30px; /* Spacious padding */
-  position: relative; /* Allows positioning of pseudo-elements */
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* Hide overflow for smooth effects */
-}
-
-/* Top section with logo and contact */
-.navbar-top {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #f0f0f0; /* Light separator line */
   position: relative;
+  z-index: 10;
+  transition: background-color 0.3s ease; /* Smooth transition for background */
 }
 
-/* Logo styling */
+/* Logo section */
 .navbar-logo a {
-  color: #2c3e50; /* Dark slate color */
-  font-size: 2.2rem; /* Slightly larger font size */
-  text-decoration: none;
+  color: #004080; /* Deep blue for the logo */
+  font-size: 2rem;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif; /* Custom font */
-  letter-spacing: 1px; /* Spaced letters */
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+  text-decoration: none;
 }
 
-/* Hover effect for logo */
 .navbar-logo a:hover {
-  color: #2980b9; /* Blue color on hover */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Enhanced text shadow on hover */
+  color: #0066cc; /* Light blue when hovering over the logo */
 }
 
-/* Contact information styling */
+/* Contact section */
 .navbar-contact {
-  color: #7f8c8d; /* Lighter gray color */
-  font-size: 0.9rem; /* Slightly smaller font size */
-  font-family: 'Poppins', sans-serif; /* Custom font */
-  text-align: right; /* Align text to the right */
+  color: #5a6d8f; /* Muted blue-gray for contact info */
+  font-size: 0.9rem;
 }
 
-/* Hamburger menu styling */
-.navbar-toggle {
-  display: none; /* Hidden by default */
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 5px; /* Reduced padding */
-  z-index: 2; /* Ensure it's above other content */
-  position: relative;
-}
-
-/* Hamburger menu bars */
-.navbar-toggle-bar {
-  display: block;
-  width: 25px; /* Reduced width */
-  height: 2px; /* Reduced height */
-  background-color: #333;
-  margin: 3px 0; /* Reduced margin */
-  transition: 0.3s ease;
-  border-radius: 3px; /* Rounded corners for bars */
-}
-
-/* Transform bars on toggle */
-.navbar-toggle.open .navbar-toggle-bar:nth-child(1) {
-  transform: rotate(45deg) translate(4px, 4px); /* Adjusted translation */
-}
-
-.navbar-toggle.open .navbar-toggle-bar:nth-child(2) {
-  opacity: 0;
-}
-
-.navbar-toggle.open .navbar-toggle-bar:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px); /* Adjusted translation */
-}
-
-/* Bottom section with navigation links */
-.navbar-bottom {
-  position: fixed;
-  top: 0;
-  left: -100%; /* Hide off-screen initially */
-  height: 100%;
-  width: 220px; /* Reduced width */
-  background-color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  flex-direction: column;
-  padding: 20px;
-  padding-top: 60px; /* Extra padding for space below the top */
-  transition: left 0.3s ease; /* Smooth slide effect */
-  z-index: 1; /* Ensure it's above other content */
-}
-
-/* Open state for sidebar menu */
-.navbar-bottom.open {
-  left: 0; /* Slide in when open */
-}
-
-/* Navigation links styling for sidebar */
+/* Navigation links for larger screens */
 .navbar-links {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  gap: 15px; /* Reduced gap between items */
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-/* Individual link styling */
-.navbar-links li a {
-  color: #2c3e50; /* Dark slate color */
-  text-decoration: none;
-  font-size: 1.2rem; /* Slightly smaller font size */
-  font-family: 'Poppins', sans-serif; /* Custom font */
-  padding: 12px 20px; /* Adjusted padding */
-  border-radius: 8px; /* Rounded corners */
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  position: relative; /* For adding decorative elements */
-}
-
-/* Hover effect for navigation links */
-.navbar-links li a:hover {
-  background-color: #2980b9; /* Blue background on hover */
-  color: #ffffff; /* White text on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
-  transform: translateY(-3px); /* Subtle lift effect */
-}
-
-/* Decorative elements for links */
-.navbar-links li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #2980b9; /* Blue underline */
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-/* Hover effect for decorative underline */
-.navbar-links li a:hover::after {
-  transform: scaleX(1);
-}
-
-/* Responsive styling */
+/* Hide links initially on small screens */
 @media (max-width: 768px) {
-  .navbar-bottom {
-    display: flex; /* Show sidebar menu on smaller screens */
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -250px; /* Start off-screen to the right */
+    width: 250px;
+    height: 50vh; /* Full height */
+    background-color: #ffffff; /* White background */
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    z-index: 100;
+    transition: right 0.3s ease; /* Smooth sliding effect */
   }
 
-  .navbar-toggle {
-    display: block; /* Show hamburger menu on smaller screens */
+  .navbar-links.open {
+    right: 0; /* Slide in from the right */
+    display: flex;
+    background-color: #004080; /* Deep blue background when menu is open */
   }
+}
+
+/* Hamburger menu button */
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.navbar-toggle-bar {
+  width: 25px;
+  height: 3px;
+  background-color: #004080; /* Deep blue for hamburger bars */
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+/* Link styling */
+.navbar-links li a {
+  color: #004080; /* Deep blue text for links */
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  font-size: 1.2rem;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.navbar-links li a:hover {
+  background-color: #0066cc; /* Light blue background on hover */
+  color: #ffffff; /* White text on hover */
+  border-radius: 8px;
+  transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+/* Change link color when the navbar is open */
+.navbar.open .navbar-links li a {
+  color: #ffffff; /* White color for links when navbar is open */
+}
+
+.navbar.open .navbar-links li a:hover {
+  background-color: #0066cc; /* Light blue on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Ensures proper spacing between links */
+}
+
+.navbar-links li {
+  margin: 0 10px;
+}
+
+.booking-button {
+  background-color: #28a745;  /* Green background for the button */
+  color: #ffffff;             /* White text for better contrast */
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;           /* Optional: Make the text bold */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.booking-button:hover {
+  background-color: #218838;   /* Darker green on hover */
+  color: #ffffff;              /* White text on hover */
 }

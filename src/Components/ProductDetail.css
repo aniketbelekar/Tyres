@@ -1,0 +1,49 @@
+.product-details {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .tyre-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between containers */
+    justify-content: center;
+  }
+  
+  .tyre-item-container {
+    width: 300px; /* Adjust based on your layout */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .tyre-item-container:hover {
+    transform: translateY(-5px); /* Lift on hover for visual feedback */
+  }
+  
+  .tyre-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .description, .specifications, .price, .rating {
+    margin: 8px 0;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #2e7d32; /* Green color for price */
+  }
+  

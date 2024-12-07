@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-about">
           <h2>About Us</h2>
-          <p>Darshan Tyres, a trustworthy tradition since 1990, has been a reputed name in the sale of tyres. With our H.O. on J M Road, we cater across Pune.</p>
+          <p>Anil Tyres, a trustworthy tradition since 2000, has been a reputed name in the sale of tyres. we are in wani </p>
           <Link to="/about" className="footer-link">Read More</Link>
         </div>
         <div className="footer-services">
@@ -71,14 +71,16 @@ const Footer = () => {
         <div className="footer-gallery">
           <h2>Gallery</h2>
           <div className="gallery-images">
-            <img src="/tvs-tyre.jpeg" alt="TVS Tyre" />
+            <img src="src/tyre refurbishing.jpeg" alt="TVS Tyre" />
             <img src="/machine.jpeg" alt="Machine" />
-            <img src="/air-machine.jpeg" alt="Air Machine" />
+            <img src="src/alloywheel.jpeg"  alt='alloywheel'/>
+            <img src="src/sf battery.jpg" alt="Air Machine" />
+            <img src="src/bike alloy.jpeg" alt="Air Machine" />
           </div>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© Copyright 2024 - Anil Tyres. All Rights Reserved | Crafted & Cared by Awrange.</p>
+        <p>© Copyright 2024 - Anil Tyres. All Rights Reserved | Crafted & Cared by Aniket.</p>
       </div>
     </footer>
   );

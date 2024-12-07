@@ -77,7 +77,7 @@
   }
   
   .contact-button {
-    background-color: #2980b9; /* Blue button */
+    background-color: #128c7e; /* Blue button */
     color: #ffffff; /* White text */
     padding: 12px 25px; /* Adjusted padding */
     font-size: 1rem; /* Adjusted font size */
@@ -89,7 +89,7 @@
   }
   
   .contact-button:hover {
-    background-color: #1f6f9e; /* Darker blue on hover */
+    background-color: #075e54; /* Darker blue on hover */
     transform: translateY(-3px); /* Slight lift effect */
   }
   

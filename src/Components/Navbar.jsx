@@ -1,53 +1,60 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleFooterClick = (e) => {
-    e.preventDefault();
-    navigate('/');
-    setTimeout(() => {
-      document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
-    }, 100); // Small delay to ensure navigation has occurred
+  // Toggle menu open/close state
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeNavbar = () => {
-    setIsOpen(false);
+  // Close menu on link click (useful for mobile view)
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
     <nav className="navbar">
-      <div className="navbar-top">
-        <div className="navbar-logo">
-          <Link to="/" onClick={closeNavbar}>Anil-Tyre</Link>
-        </div>
-        <div className="navbar-contact">
-          <span>Email: info@anilcycletyre.com</span>
-          <span> | </span>
-          <span>Contact: +123 456 7890</span>
-        </div>
-        <button className={`navbar-toggle ${isOpen ? 'open' : ''}`} onClick={toggleNavbar}>
-          <div className="navbar-toggle-bar"></div>
-          <div className="navbar-toggle-bar"></div>
-          <div className="navbar-toggle-bar"></div>
-        </button>
+      {/* Logo Section */}
+      <div className="navbar-logo">
+        <Link to="/" onClick={closeMenu}>Anil-Tyre</Link>
       </div>
-      <div className={`navbar-bottom ${isOpen ? 'open' : ''}`}>
-        <ul className="navbar-links">
-          <li><Link to="/" onClick={closeNavbar}>Home</Link></li>
-          <li><Link to="/products" onClick={closeNavbar}>Products</Link></li>
-          <li><Link to="/about" onClick={closeNavbar}>About Us</Link></li>
-          <li><a href="/" onClick={(e) => { e.preventDefault(); handleFooterClick(); closeNavbar(); }}>Scroll to Footer</a></li>
-          <li><Link to="/contact" onClick={closeNavbar}>Contact</Link></li>
-        </ul>
+
+      {/* Contact Details Section */}
+      <div className="navbar-contact">
+        <span>Email: info@anilcycletyre.com</span> | 
+        <span> Contact: 9823678248</span>
       </div>
+
+      {/* Hamburger Toggle Button */}
+      <button
+        className={`navbar-toggle ${menuOpen ? 'active' : ''}`}
+        onClick={toggleMenu}
+        aria-label="Toggle navigation menu"
+      >
+        <div className="navbar-toggle-bar"></div>
+        <div className="navbar-toggle-bar"></div>
+        <div className="navbar-toggle-bar"></div>
+      </button>
+
+      {/* Navigation Links */}
+      <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
+        <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+        <li><Link to="/products" onClick={closeMenu}>Products</Link></li>
+        <li><Link to="/about" onClick={closeMenu}>About Us</Link></li>
+        <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
+        <li>
+          <Link
+            to="/booking"
+            className="booking-button"
+            onClick={closeMenu}
+          >
+            Book Appointment
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 };
