@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../Components/TyreSelector.css';
+import '../src/TyreSelector.css';
 
 const TyreSelector = () => {
   const [selectedBrand, setSelectedBrand] = useState(''); // Selected vehicle brand
